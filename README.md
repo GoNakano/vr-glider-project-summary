@@ -1,6 +1,6 @@
 # VRグライダー開発プロジェクト概要
 
-**▶ 作品の詳しい説明ページ：https://gonakano.github.io/vr-glider-project-summary/** （仕組みの図解・ゲインの説明・担当範囲・論文と受賞）
+**▶ 作品の詳しい説明ページ：https://gonakano.github.io/vr-glider-project-summary/** （チームで共有する作品紹介。仕組み・論文と受賞）
 
 ## 概要
 
