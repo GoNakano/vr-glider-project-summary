@@ -44,6 +44,8 @@ h3{font-size:19px;margin:28px 0 8px}
 .grid{display:grid;gap:16px}
 .g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(2,1fr)}
+@media (max-width:640px){.g4{grid-template-columns:1fr}}
 .card h4{margin:0 0 6px;font-size:17px}
 .card p{margin:0;color:var(--sub);font-size:15px}
 figure.fig{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin:18px 0}
@@ -193,7 +195,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
   </ul>
   <h3>体験してもらいながら改善</h3>
   <p>展示の前から、研究室の学生や先生方に何度も体験してもらい、意見をもとに調整を重ねました。</p>
-  <div class="grid g2">
+  <div class="grid g4">
     <div class="card"><h4>酔いにくく、軽快に</h4><p>機体の動き方を調整してVR酔いを起こしにくくし、入力の遅れや処理の重さも抑えました。</p></div>
     <div class="card"><h4>誰でも簡単に</h4><p>初めての人でもすぐ操作できるようにし、子ども向けには横方向の入力を抑えた簡単なモードも用意しました。</p></div>
     <div class="card"><h4>風と音で分かりやすく</h4><p>速度に合わせて送風機の風と風の音を変え、速さを体でも感じられるようにしました。</p></div>
