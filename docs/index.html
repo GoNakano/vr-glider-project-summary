@@ -84,7 +84,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
       <span class="badge award">ヒューマンインタフェースシンポジウム2026 優秀プレゼンテーション賞</span>
       <span class="badge">展示で100人以上が体験</span>
     </div>
-    <a class="btn" href="https://dl.acm.org/doi/10.1145/3822517.3849972#supplementary-materials">▶ デモ動画を見る（ACM Digital Library）</a>
+    <a class="btn" href="https://dl.acm.org/doi/10.1145/3822517.3849972#supplementary-materials">▶ デモ動画を見る（ACM Digital Libraryの補足資料）</a>
     <img src="img/fig1b.jpg" alt="円形のバランスボードにうつ伏せで乗り、VRゴーグルを着けてハンドルを握る体験者">
   </div>
 </header>
@@ -104,17 +104,17 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
     <figcaption>体の小さな傾き θp（最大4°）を、VR内では機体の大きな傾き θv = G・θp（最大80°）として見せる。</figcaption>
   </figure>
   <div class="grid g2">
-    <div class="card"><h4>これまでの方法</h4><p>うつ伏せで乗るVR飛行体験では、機体の姿勢をそのまま台の傾きとして体に返すのが一般的です。急な角度を出すには体も大きく傾ける必要があり、モーターで動く台が要ります。安全面の不安が増え、装置も複雑で高価になります。</p></div>
+    <div class="card"><h4>これまでの方法</h4><p>代表例のBirdlyのように、うつ伏せで乗るVR飛行体験には、機体の姿勢を台の傾きとして体に伝えるものがあります。この方法で急な角度を伝えるには体も同じだけ大きく傾ける必要があり、通常はモーターなどで動かす台が要ります。安全面の不安が増え、装置も複雑で高価になります。</p></div>
     <div class="card"><h4>この作品の方法</h4><p>体の傾きは最大約4°と小さいまま、VR内の機体の傾きだけを大きく見せます。視覚と同期した体の傾きが、実際より大きく感じられる現象（傾斜錯覚、illusory self-tilt）を利用する狙いです。</p></div>
   </div>
-  <p class="note">この現象を「うつ伏せ」で、しかも「自分で傾きを作る」飛行体験に使った例はほとんどありません。うつ伏せを選んだのは、重心の前後移動がそのまま機体の機首の上げ下げ（ピッチ）に対応するためです。</p>
+  <p class="note">この現象を「うつ伏せ」で、しかも「自分で傾きを作る」飛行体験に使う研究は、まだ十分に行われていません。うつ伏せを選んだのは、重心の前後移動がそのまま機体の機首の上げ下げ（ピッチ）に対応するためです。</p>
 </div></section>
 
 <section id="system"><div class="wrap">
   <h2><span class="num">2</span>全体構成</h2>
   <p class="kicker">天板の傾きをVRアプリに送り、ゲインを掛けて機体に反映する。</p>
   <figure class="fig">
-    <img src="img/fig2.jpg" alt="バランスボード装置とVRアプリの構成図">
+    <img src="img/fig2.jpg" alt="構成図：天板の傾きをIMUとArduino Nano ESP32で測ってWebSocketでVRアプリへ送り、倍率を掛けて機体の傾きに反映する">
     <figcaption>バランスボード装置（左）とVRアプリ（右）。両者はWebSocketでつながっている。</figcaption>
   </figure>
   <ol class="tight">
@@ -127,7 +127,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
 
 <section id="board"><div class="wrap">
   <h2><span class="num">3</span>入力装置：前後にだけ傾くバランスボード</h2>
-  <p class="kicker">安全のため、傾きは小さく、方向は1つに絞っています。</p>
+  <p class="kicker">傾きは安全のため約4°までに抑え、動きは前後だけに絞っています。</p>
   <table>
     <tr><th>部品</th><th>内容</th></tr>
     <tr><td>天板</td><td>バーチ合板の円形、直径1800 mm・厚さ30 mm。うつ伏せで乗り、2本のハンドルを握る</td></tr>
@@ -184,7 +184,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
   <p class="kicker">B3研修のチーム制作から始まり、体験してもらいながら改善を重ね、大学のイベントでの体験展示と2つの学会発表へ。</p>
   <div class="grid g2" style="align-items:start">
     <div class="card"><div class="stat">100人以上</div><p>いばらき×立命館DAYとRITSUMEIKAN GLOBAL WEEKの体験展示で、合わせて100人以上に体験してもらいました。</p></div>
-    <div class="card"><div class="stat">NHK</div><p>NHKの取材を受けました（放送時期は未定）。</p></div>
+    <div class="card"><div class="stat">NHK</div><p>NHKの取材を受けました（2026年11月時点で未放送）。</p></div>
   </div>
   <ul class="tl">
     <li><span class="d">2026年2月ごろ</span>研究室のB3研修のチーム制作として開始。最初はパルクールを題材にする予定だったが、途中でVRグライダーに変更。</li>
@@ -196,12 +196,12 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
   <h3>体験してもらいながら改善</h3>
   <p>展示の前から、研究室の学生や先生方に何度も体験してもらい、意見をもとに調整を重ねました。</p>
   <div class="grid g4">
-    <div class="card"><h4>酔いにくく、軽快に</h4><p>機体の動き方を調整してVR酔いを起こしにくくし、入力の遅れや処理の重さも抑えました。</p></div>
-    <div class="card"><h4>誰でも簡単に</h4><p>初めての人でもすぐ操作できるようにし、子ども向けには横方向の入力を抑えた簡単なモードも用意しました。</p></div>
+    <div class="card"><h4>酔いにくく、軽快に</h4><p>体験した人の意見をもとに、酔いに配慮して機体の動き方を調整し、入力の遅れや処理の重さも抑えました。</p></div>
+    <div class="card"><h4>初めてでも操作しやすく</h4><p>初めての人でも操作しやすいように調整し、子ども向けには横方向の入力を抑えた簡単なモードも用意しました。</p></div>
     <div class="card"><h4>風と音で分かりやすく</h4><p>速度に合わせてサーキュレーターの風と風の音を変え、速さを体でも感じられるようにしました。</p></div>
-    <div class="card"><h4>迷わない案内</h4><p>逆向きに飛ぶと出る逆走の警告表示・警告音を付けました。次のリングを示す矢印も試しましたが、酔いの原因になるという意見を受けて外しました。</p></div>
+    <div class="card"><h4>進む方向の案内</h4><p>逆向きに飛ぶと出る逆走の警告表示・警告音を付けました。次のリングを示す矢印も試しましたが、酔いの原因になるという意見を受けて外しました。</p></div>
   </div>
-  <p class="note">学会発表では、研究のテーマである傾斜錯覚を確かめやすくするため、操作を前後だけに絞ったシンプルな構成にしています。</p>
+  <p class="note">ここに挙げた改善には、学内展示の版での内容も含みます。学会発表の版は、研究のテーマである傾斜錯覚に絞るため、操作を前後だけにしたシンプルな構成です（このページの1〜5は学会発表の版の説明です）。</p>
 </div></section>
 
 <section id="pub"><div class="wrap">
@@ -231,7 +231,8 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
 
 <footer><div class="wrap">
   <p>ソースコードは研究室管理のため公開していません。</p>
-  <p>図と写真は上記VRST 2026論文（© 2026 the authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>）のFigure 1・2から引用しました（一部を切り出し、パネル記号を除いて掲載）。VR空間には Skybox Series Free（Avionx）と Fantastic City Generator（MasterPixel3D）を使用しています（Standard Unity Asset Store EULA）。</p>
+  <p>図と写真は上記VRST 2026論文（© 2026 the authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>）のFigure 1・2から引用しました（一部を切り出し、パネル記号を除いて掲載）。</p>
+  <p>VR空間（図1(c)・図2のVR画面を含む）には Skybox Series Free（Avionx）と Fantastic City Generator（MasterPixel3D）を使用しています（Standard Unity Asset Store EULA）。</p>
 </div></footer>
 
 </body>
