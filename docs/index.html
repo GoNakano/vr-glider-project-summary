@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SKY HIGH!!! | 腹ばいで乗るVR飛行体験</title>
-<meta name="description" content="バランスボードに腹ばいで乗り、体の小さな傾きをVR内で大きく見せる飛行体験システム。VRST 2026 Demo、ヒューマンインタフェースシンポジウム2026 優秀プレゼンテーション賞。">
+<title>SKY HIGH!!! | うつ伏せで乗るVR飛行体験</title>
+<meta name="description" content="バランスボードにうつ伏せで乗り、体の小さな傾きをVR内で大きく見せる飛行体験システム。VRST 2026 Demo、ヒューマンインタフェースシンポジウム2026 優秀プレゼンテーション賞。">
 <style>
 :root{
   --bg:#f6f8fb; --panel:#ffffff; --ink:#14202e; --sub:#4d5b6b; --line:#d9e0e8;
@@ -69,7 +69,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
 <header class="hero">
   <div class="wrap">
     <h1>SKY HIGH!!!</h1>
-    <p class="lead">体は数度しか傾かないのに、空では急角度で上昇・下降する。腹ばいでバランスボードに乗るVR飛行体験。</p>
+    <p class="lead">体は数度しか傾かないのに、空では急角度で上昇・下降する。うつ伏せでバランスボードに乗るVR飛行体験。</p>
     <p class="en">A VR Flight Experience Using Tilt Illusion in a Prone Posture</p>
     <div class="badges">
       <span class="badge">ACM VRST 2026 Demo</span>
@@ -77,7 +77,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
       <span class="badge">Unity・Meta Quest 3・IMU・ESP32</span>
     </div>
     <a class="btn" href="https://dl.acm.org/doi/10.1145/3822517.3849972#supplementary-materials">▶ デモ動画を見る（ACM Digital Library）</a>
-    <img src="img/fig1b.jpg" alt="円形のバランスボードに腹ばいで乗り、VRゴーグルを着けてハンドルを握る体験者">
+    <img src="img/fig1b.jpg" alt="円形のバランスボードにうつ伏せで乗り、VRゴーグルを着けてハンドルを握る体験者">
   </div>
 </header>
 
@@ -96,10 +96,10 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
     <figcaption>体の小さな傾き θp（最大4°）を、VR内では機体の大きな傾き θv = G・θp（最大80°）として見せる。</figcaption>
   </figure>
   <div class="grid g2">
-    <div class="card"><h4>これまでの方法</h4><p>腹ばいで乗るVR飛行体験では、機体の姿勢をそのまま台の傾きとして体に返すのが一般的です。急な角度を出すには体も大きく傾ける必要があり、モーターで動く台が要ります。安全面の不安が増え、装置も複雑で高価になります。</p></div>
+    <div class="card"><h4>これまでの方法</h4><p>うつ伏せで乗るVR飛行体験では、機体の姿勢をそのまま台の傾きとして体に返すのが一般的です。急な角度を出すには体も大きく傾ける必要があり、モーターで動く台が要ります。安全面の不安が増え、装置も複雑で高価になります。</p></div>
     <div class="card"><h4>この作品の方法</h4><p>体の傾きは最大約4°と小さいまま、VR内の機体の傾きだけを大きく見せます。視覚と同期した体の傾きが、実際より大きく感じられる現象（illusory self-tilt）を利用する狙いです。</p></div>
   </div>
-  <p class="note">この現象を「腹ばい」で、しかも「自分で傾きを作る」飛行体験に使った例はほとんどありません。腹ばいを選んだのは、重心の前後移動がそのまま機体の機首の上げ下げ（ピッチ）に対応するためです。</p>
+  <p class="note">この現象を「うつ伏せ」で、しかも「自分で傾きを作る」飛行体験に使った例はほとんどありません。うつ伏せを選んだのは、重心の前後移動がそのまま機体の機首の上げ下げ（ピッチ）に対応するためです。</p>
 </div></section>
 
 <section id="system"><div class="wrap">
@@ -122,7 +122,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
   <p class="kicker">安全のため、傾きは小さく、方向は1つに絞っています。</p>
   <table>
     <tr><th>部品</th><th>内容</th></tr>
-    <tr><td>天板</td><td>バーチ合板の円形、直径1800 mm・厚さ30 mm。腹ばいで乗り、2本のハンドルを握る</td></tr>
+    <tr><td>天板</td><td>バーチ合板の円形、直径1800 mm・厚さ30 mm。うつ伏せで乗り、2本のハンドルを握る</td></tr>
     <tr><td>補強板</td><td>八角形、幅1300 mm・厚さ24 mm。天板の下に固定</td></tr>
     <tr><td>支点</td><td>半球状のバランストレーナー（BOSU Pro NexGen、直径650 mm）</td></tr>
     <tr><td>センサー</td><td>IMU（SparkFun VR IMU Breakout、BNO086）＋ Arduino Nano ESP32</td></tr>
