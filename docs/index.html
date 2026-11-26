@@ -59,6 +59,11 @@ ul.tight,ol.tight{margin:6px 0;padding-left:1.3em}
 ul.tight li,ol.tight li{margin:3px 0}
 .note{font-size:14px;color:var(--sub)}
 .pill{display:inline-block;background:var(--soft);color:var(--accent);border-radius:6px;padding:1px 8px;font-size:13px;margin:2px 4px 2px 0}
+.tl{list-style:none;padding:0;margin:18px 0 0;border-left:3px solid var(--line)}
+.tl li{position:relative;padding:0 0 18px 22px}
+.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--accent,#2f6fd6)}
+.tl .d{display:block;font-size:13px;color:var(--sub);font-weight:600}
+.stat{font-size:34px;font-weight:800;line-height:1.1}
 .pub{margin:0 0 18px}
 .pub+.pub{padding-top:16px;border-top:1px solid var(--line, #dde3ec)}
 .pub b{display:block}
@@ -75,7 +80,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
     <div class="badges">
       <span class="badge">ACM VRST 2026 Demo</span>
       <span class="badge award">ヒューマンインタフェースシンポジウム2026 優秀プレゼンテーション賞</span>
-      <span class="badge">Unity・Meta Quest 3・IMU・ESP32</span>
+      <span class="badge">展示で100人以上が体験</span>
     </div>
     <a class="btn" href="https://dl.acm.org/doi/10.1145/3822517.3849972#supplementary-materials">▶ デモ動画を見る（ACM Digital Library）</a>
     <img src="img/fig1b.jpg" alt="円形のバランスボードにうつ伏せで乗り、VRゴーグルを着けてハンドルを握る体験者">
@@ -84,7 +89,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
 
 <nav class="toc"><div class="wrap">
   <a href="#idea">1 アイデア</a><a href="#system">2 全体構成</a><a href="#board">3 入力装置</a>
-  <a href="#gain">4 傾きの誇張</a><a href="#app">5 VRアプリ</a><a href="#pub">6 論文・発表</a><a href="#future">7 課題</a>
+  <a href="#gain">4 傾きの誇張</a><a href="#app">5 VRアプリ</a><a href="#history">6 これまでの歩み</a><a href="#pub">7 論文・発表</a><a href="#future">8 課題</a>
 </div></nav>
 
 <main>
@@ -172,8 +177,24 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
   <p style="margin-top:14px"><span class="pill">Unity</span><span class="pill">C#</span><span class="pill">Meta Quest 3</span><span class="pill">IMU（BNO086）</span><span class="pill">Arduino Nano ESP32</span><span class="pill">WebSocket</span></p>
 </div></section>
 
+<section id="history"><div class="wrap">
+  <h2><span class="num">6</span>これまでの歩み</h2>
+  <p class="kicker">B3研修のチーム制作から始まり、大学のイベントでの体験展示と2つの学会発表へ。</p>
+  <div class="grid g2" style="align-items:start">
+    <div class="card"><div class="stat">100人以上</div><p>いばらき×立命館DAYとRITSUMEIKAN GLOBAL WEEKの体験展示で、合わせて100人以上に体験してもらいました。</p></div>
+    <div class="card"><div class="stat">NHK</div><p>NHKの取材を受けました（放送時期は未定）。</p></div>
+  </div>
+  <ul class="tl">
+    <li><span class="d">2026年2月ごろ</span>研究室のB3研修のチーム制作として開始。最初はパルクールを題材にする予定だったが、途中でVRグライダーに変更。</li>
+    <li><span class="d">2026年5月17日</span><a href="https://www.ritsumei.ac.jp/news/detail?id=4475">いばらき×立命館DAY2026</a>（立命館大学 大阪いばらきキャンパス）で体験展示。</li>
+    <li><span class="d">2026年9月</span>ヒューマンインタフェースシンポジウム2026（岡山大学）で発表し、優秀プレゼンテーション賞を受賞。</li>
+    <li><span class="d">2026年11月</span><a href="https://ibaraki.ritsumei.ac.jp/gw2026/">RITSUMEIKAN GLOBAL WEEK 2026</a>（大阪いばらきキャンパス）で体験展示。</li>
+    <li><span class="d">2026年11月16〜18日</span>ACM VRST 2026（東北大学、仙台）でデモ発表。</li>
+  </ul>
+</div></section>
+
 <section id="pub"><div class="wrap">
-  <h2><span class="num">6</span>論文・発表</h2>
+  <h2><span class="num">7</span>論文・発表</h2>
   <div class="card">
     <p class="pub"><b>SKY HIGH!!!: A VR Flight Experience Using Tilt Illusion in a Prone Posture</b>
     Tenro Hanamitsu, Hideto Niimi, Go Nakano, Yusei Yoshida, Ryoichi Watanabe, Marie M. Morita, Satoshi Hashiguchi, Fumihisa Shibata, Asako Kimura.
@@ -187,7 +208,7 @@ footer{padding:36px 0 56px;color:var(--sub);font-size:13px}
 </div></section>
 
 <section id="future"><div class="wrap">
-  <h2><span class="num">7</span>今後の課題</h2>
+  <h2><span class="num">8</span>今後の課題</h2>
   <ul class="tight">
     <li>今のゲインは、機体の傾きだけでなく速度の変化にも効いているため、2つの影響をまだ切り分けられていません。</li>
     <li>速度を揃えたうえで、ゲインが傾きの感じ方・飛行感・VR酔いにどう影響するかを評価する予定です。</li>

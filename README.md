@@ -1,6 +1,6 @@
 # VRグライダー開発プロジェクト概要
 
-**▶ 作品の詳しい説明ページ：https://gonakano.github.io/vr-glider-project-summary/** （チームで共有する作品紹介。仕組み・論文と受賞）
+**▶ 作品の詳しい説明ページ：https://gonakano.github.io/vr-glider-project-summary/** （チームで共有する作品紹介。仕組み・これまでの歩み・論文と受賞）
 
 ## 概要
 
@@ -16,6 +16,11 @@ IMUセンサーによる姿勢推定、UnityによるVR空間の構築、Meta Qu
 - Tenro Hanamitsu, Hideto Niimi, Go Nakano, Yusei Yoshida, Ryoichi Watanabe, Marie M. Morita, Satoshi Hashiguchi, Fumihisa Shibata, Asako Kimura. **SKY HIGH!!!: A VR Flight Experience Using Tilt Illusion in a Prone Posture.** In *Proceedings of the 32nd ACM Symposium on Virtual Reality Software and Technology (VRST 2026)*, Demo. [https://doi.org/10.1145/3822517.3849972](https://doi.org/10.1145/3822517.3849972)
 - 2026年11月16〜18日、東北大学（仙台）でデモ展示。筆頭著者がポスターで研究を説明し、自分は共著者として体験者へのデモ説明と、システム・通信・ハードの仕組みの説明を他の著者と協力して英語で担当しました。
 - 新美 秀人, 花光 天朗, 中野 剛, 他. 「SKY HIGH!!!：腹臥位における傾斜錯覚を利用したVR飛行体験」, ヒューマンインタフェースシンポジウム2026（2026年9月、岡山大学）. **優秀プレゼンテーション賞（審査員による選考）受賞**（[受賞者一覧](https://jp.his.gr.jp/symposium/award2026/)）
+
+### 展示
+
+- いばらき×立命館DAY2026（2026年5月17日）と RITSUMEIKAN GLOBAL WEEK 2026（2026年11月）で体験展示。合わせて100人以上に体験してもらいました。
+- NHKの取材を受けました（放送時期は未定）。
 
 ---
 
